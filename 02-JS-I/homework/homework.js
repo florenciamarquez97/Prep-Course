@@ -123,10 +123,12 @@ function numeroRandom(max) {
 }
 
 function esPositivo(numero) {
-   if (numero < 0){
-    return "Es Positivo"
+  if (numero === 0){
+    return false
+  } else if (numero > 0){
+    return "Es positivo"
    } else {
-    return "Es Negativo"
+    return "Es negativo"
    }
 
   
@@ -152,12 +154,12 @@ function obtenerAreaRectangulo(alto, ancho) {
 
 
 function retornarPerimetro(lado){
- return lado*lado
+ return lado*4
 }
 
 
 function areaDelTriangulo(base, altura){
-  return base*altura
+  return base*altura/2
 
 }
 
@@ -177,11 +179,11 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.lenght !== 1){
+  if (letra.length !== 1){
     return "Dato incorrecto"
   }
 
-  if (letra === a || letra === e || letra === i || letra === o || letra === u){
+  if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
     return "Es vocal"
   } else {
     return "Dato incorrecto"
